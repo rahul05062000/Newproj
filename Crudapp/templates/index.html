@@ -1,0 +1,82 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="ie=edge" http-equiv="X-UA-Compatible"/>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XERBF0W0JF"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag("js", new Date());
+  gtag("config", "G-XERBF0W0JF");
+</script>
+<title>Dodging Drive</title>
+<!-- Link to CSS with Django static tag -->
+<link href="{% static 'style.css' %}" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css?family=Squada+One&display=swap" rel="stylesheet"/>
+<style>
+  .button-container {
+    position: fixed;
+    top: 30px;
+    right: 10px;
+    z-index: 1000;
+  }
+
+  .button {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    color: black;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+
+  .plus {
+    font-size: 24px;
+  }
+
+  @media (max-width: 600px) {
+    .button {
+      padding: 5px 10px;
+      font-size: 14px;
+    }
+  }
+</style>
+</head>
+<body>
+<div class="button-container">
+  <button class="button">
+    <svg class="w-5 h-5 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7 7V5"/>
+    </svg>
+    <span>Create Your Game</span>
+  </button>
+</div>
+<div id="container">
+  <canvas height="464" id="canvas" width="350"></canvas>
+</div>
+<script src="{% static 'game.js' %}"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    // Get the button element
+    var button = document.querySelector('.button');
+
+    // Add click event listener to open the chaotix.app page in a new tab
+    button.addEventListener('click', function() {
+      window.open('https://chaotix.app', '_blank');
+    });
+  });
+</script>
+</body>
+</html>
