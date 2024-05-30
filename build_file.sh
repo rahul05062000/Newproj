@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# Activate virtual environment (if applicable)
-source /path/to/your/virtualenv/bin/activate  # Replace /path/to/your/virtualenv with the actual path to your virtual environment
+# Activate virtual environment
+source /c/Users/rahul/Desktop/New/env/Scripts/activate
 
 # Install dependencies
 echo "Installing dependencies..."
