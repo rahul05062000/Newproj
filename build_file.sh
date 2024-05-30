@@ -1,12 +1,12 @@
 #!/bin/bash
 
-# Use specific Python version
-PYTHON=python3.9
+# Activate virtual environment (if applicable)
+source /path/to/your/virtualenv/bin/activate  # Replace /path/to/your/virtualenv with the actual path to your virtual environment
 
 # Install dependencies
 echo "Installing dependencies..."
-$PYTHON -m pip install -r requirements.txt
+pip install -r requirements.txt
 
 # Collect static files
 echo "Collecting static files..."
-$PYTHON manage.py collectstatic --noinput
+python manage.py collectstatic --noinput
