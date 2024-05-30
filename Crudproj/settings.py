@@ -165,6 +165,20 @@ STATIC_URL = '/static/'
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+# settings.py
+
+import os
+
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+# Set the directory where Django will collect static files
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+# Define additional directories from which to collect static files
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static'),  # Add your project's 'static' directory
+    # Add more directories as needed
+]
 
 
 # Default primary key field type

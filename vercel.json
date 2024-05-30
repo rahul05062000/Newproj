@@ -2,12 +2,13 @@
     "version": 2,
     "builds": [
       { "src": "manage.py", "use": "@vercel/python" },
-      { "src": "file_upload_project/wsgi.py", "use": "@vercel/python" }
+      { "src": "Crudproj/wsgi.py", "use": "@vercel/python" },
+      { "src": "./build_file.sh", "use": "@vercel/static-build" }  
     ],
     "routes": [
       {
         "src": "/(.*)",
-        "dest": "file_upload_project/wsgi.py"
+        "dest": "Crudproj/wsgi.py"
       }
     ]
   }
